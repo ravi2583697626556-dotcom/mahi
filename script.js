@@ -10,3 +10,5 @@ lights();addEventListener('resize',lights);
 $('.msg').innerHTML=$('.msg').textContent.split(' ').map((w,i)=>`<span style="--i:${i}">${w}</span>`).join('');
 $('#bl').onclick=e=>{const off=$('#cake').classList.toggle('off');e.target.textContent=off?'Light them again 🕯️':'Blow the candles 🎂';if(off)petals(90,1)};
 document.querySelectorAll('.env').forEach(e=>{e.onclick=()=>e.classList.toggle('open');e.onkeydown=k=>{if(k.key=='Enter'||k.key==' '){k.preventDefault();e.click()}}});
+const lp=$('#loading-page'),eb=$('#enter-btn'),m=$('#bg-music');
+if(eb)eb.onclick=()=>{lp.classList.add('hidden');document.body.classList.add('loaded');m.play();setTimeout(()=>lp.remove(),800)};

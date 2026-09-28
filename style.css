@@ -75,3 +75,7 @@ h3{font-size:clamp(38px,9vw,58px);color:var(--rose);margin-bottom:8px;line-heigh
 footer{padding:30px 16px 50px;font-style:italic}
 footer span{display:inline-block;color:var(--rose);animation:beat 1.8s infinite}
 @media (prefers-reduced-motion:reduce){*,::before,::after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+#loading-page{position:fixed;inset:0;background:linear-gradient(160deg,#fff1f5,#ffdfe9 40%,#f1e0ff 75%,#fff1f5) 0 0/300% 300%;animation:bg 22s ease infinite;z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity .8s ease}
+#loading-page.hidden{opacity:0;pointer-events:none}
+body:not(.loaded) main, body:not(.loaded) #sky, body:not(.loaded) footer { display: none; }
+#enter-btn{font-size:28px;padding:16px 48px;animation:ring 2.6s ease-out infinite}
